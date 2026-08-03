@@ -1,13 +1,13 @@
 from fastapi import FastAPI
-from schemas import IrrigationInput
+from api.schemas import IrrigationInput
 import pandas as pd
 import joblib
 
 # ----------------------------
 # Load Model & Label Encoders
 # ----------------------------
-model = joblib.load("../models/irrigation_model.pkl")
-label_encoders = joblib.load("../models/label_encoders.pkl")
+model = joblib.load("models/irrigation_model.pkl")
+label_encoders = joblib.load("models/label_encoders.pkl")
 
 # ----------------------------
 # Create FastAPI App
